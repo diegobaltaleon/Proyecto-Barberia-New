@@ -1,0 +1,904 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0 ;
+    list-style: none;
+}
+
+/* Barra de Navegacion  */
+header{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.nav{
+    background-color: rgba(90, 90,90,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: #afa27b;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #afa27b;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+.nav a{
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffff;
+    font-family: 'MedievalSharp', cursive;
+    padding: 10px 15px;
+    margin: 0;
+    transition: all 0.3s ease;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.nav a:hover {
+    color: #afa27b;
+    transform: scale(1.05);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;
+}
+#logo{
+    text-align: center;
+    width: 80px;
+    margin: 0 20px;
+}
+
+.logo-nav{
+    height: auto;
+    border-radius: 35%;
+    width: 100%;
+    display: block;
+}
+
+
+/* Seccion Main  */
+main{
+    display: block;
+    unicode-bidi: isolate;
+    font-family: 'lato';
+    margin-bottom: 30px;
+}
+section{
+    unicode-bidi: isolate;
+    display: block;
+}
+
+/* PORTADA  */
+#portada{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('barberia-elegante.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+}
+#titulo{
+    border-bottom: 2px solid #afa27b;
+    width: 95%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 25px 0px;
+    font-size: 30px;
+}
+.titulo-portada{
+    display: block;
+    unicode-bidi: isolate;
+}
+.titulo-portada h1{
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    unicode-bidi: isolate;
+}
+
+#portada h2{
+    margin: 40px 0;
+    padding: 0px;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    unicode-bidi: isolate;
+    color: #afa27b;
+}
+.boton-portada{
+    color: #afa27b;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #afa27b;
+    padding: 1.25em 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+.boton-portada:hover{
+    background-color: #afa27b;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* DESCRIPCION  */
+
+    /* ARTICLE  */
+.about {
+    justify-content: space-around;
+    font-family: 'lato', sans-serif;
+}
+.contenedor{
+    margin: 0 30px;
+    padding: 25px;
+    width: 50%;
+    font-family: 'lato', 'sans-serif';
+}
+.contenedor h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 15px 0;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'Cinzel', serif;
+    color: #282828;
+    letter-spacing: 1.5px;
+    unicode-bidi: isolate;
+}
+.contenedor h3 {
+    font-size: 2em;
+    margin: 15px 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'MedievalSharp', cursive;
+    color: #444;
+    unicode-bidi: isolate;
+}
+.contenedor p{
+    line-height: 1.6;
+    text-align: justify;
+    margin: 25px 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.contenedor p::first-letter{
+    font-weight: 700;
+    font-size: 22px;
+    background: rgba(90, 90,90,0.5);
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.contenedor a{
+    font-size: 20px;
+    text-decoration: none;
+    background: #afa27b;
+    color: #fff;
+    padding: 15px 10px;
+    margin: 25px 0;
+    border-radius: 5%;
+    font-family: 'lato', 'sans-serif';
+}
+.contenedor a:hover{
+    background-color: rgb(83, 80, 80);
+    color: white;
+    font-weight: bold;
+}
+article{
+    display: block;
+    unicode-bidi: isolate;
+}
+.contenedor hr{
+    margin: 15px 0;
+    max-width: 20%;
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+    /* FIGURE  */
+
+.about > figure{
+    width: 50%;
+    position: relative;
+}
+figure{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;
+}
+.figura-descripcion img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    max-width: 800px;
+    max-height: 600px;
+}
+.sillaBackground{
+    width: 30vw;
+    height: 50vh;
+    background: #afa27b;
+    position: absolute;
+    top: 0;
+    right: 150px;
+    z-index: -1;
+}
+
+/* SERVICIOS  */
+.servicesContainer{
+    width: 100%;
+    min-height: 300px;
+    background: #282828;
+    margin-bottom: 30px;
+    padding-bottom: 150px;
+    position: relative;
+}
+#top{
+    width: 50px;
+    height: 50px;
+    background: rgba(90, 90, 90, 0.5);
+    border-radius: 10%;
+    padding: 10px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+}
+.services{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+    font-family: 'lato','sans-serif';
+}
+.services h2{
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    unicode-bidi: isolate;
+}
+/* TABLA SERVICIOS  */
+table{
+    margin: 0 auto;
+    padding: 25px ;
+    border: 15px solid #afa27b;
+    background: #282828;
+    background: url(https://barbershop23i.netlify.app/img/table_bg.png);
+    background-position: center;
+    background-size: center;
+    
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: #afa27b;
+    width: 40%  ;
+    display: flex;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+    
+}
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+tr:nth-child(odd){
+    color: #fff;
+}
+td{
+    font-size: 30px;
+    border-bottom: 1px dashed #afa27b;
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    width: 100%;
+    }
+td:first-child{
+    padding: 15px 200px 15px 0px;
+}
+tr:nth-child(even){
+    color: #afa27b;
+}
+/* FOTOS  */
+
+
+/* FOOTER  */
+footer{
+    display: block;
+    unicode-bidi: isolate;
+    background: #121212;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'lato', sans-serif;
+    position: relative;
+    clear: both;
+}
+footer section{
+    background: #121212;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+section{
+    display: block;
+    unicode-bidi: isolate;
+}
+#logo{
+    text-align: center;
+    width: 10%;
+}
+#logo img{
+    width: 100%;
+    height: auto;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    border-radius: 40%;
+}
+figure{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+}
+.footer-links a{
+    padding: 10px 0;
+    color: #afa27b;
+    font-family: 'lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+a:-webkit-any-link{
+    color: webkit-link;
+    cursor: pointer;
+}
+.h3-footer{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    padding: 0 0 0 150px;
+}
+.barberia-footer{
+    color: #afa27b;
+    font-size: 20px;
+    padding: 60px;
+    font-weight: bold;
+}
+.p-footer{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    padding: 0 0 0 150px;
+    color: #afa27b;
+}
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+   
+  }
+  .iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+    
+  }
+  .iconos-redes-sociales a:hover{
+    background-color: rgb(126, 126, 126);
+    border: 2px solid rgb(83, 85, 88);
+  }
+  .iconos-redes-sociales a:hover i{
+    color: black;
+  }
+
+/* Estilos del menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(90, 90, 90, 0.95);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: 'MedievalSharp', cursive;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #afa27b;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-trigger {
+    position: relative;
+}
+
+.dropdown-trigger::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #afa27b;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-trigger::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Media Queries para Responsividad */
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .nav {
+        gap: 20px;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+
+    #logo {
+        width: 60px;
+    }
+
+    .titulo-portada h1 {
+        font-size: 2.2em;
+    }
+
+    #portada h2 {
+        font-size: 1.3em;
+    }
+
+    .about {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contenedor {
+        width: 50%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .figura-descripcion {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .sillaBackground {
+        width: 100%;
+        height: 100%;
+        right: 0;
+    }
+
+    /* Ajustes para la tabla de servicios */
+    table {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        display: table;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+    }
+
+    tr {
+        display: table-row;
+        text-align: center;
+    }
+
+    td {
+        font-size: 1.2em;
+        padding: 10px;
+        text-align: center;
+    }
+
+    td:first-child {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* Móviles (menos de 768px) */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(90, 90, 90, 0.95);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .nav.active .nav-links {
+        display: flex;
+    }
+
+    .nav.active .hamburger {
+        background-color: transparent;
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav.active .hamburger::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #logo {
+        width: 50px;
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        width: 100%;
+        background-color: rgba(90, 90, 90, 0.8);
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .titulo-portada h1 {
+        font-size: 1.8em;
+    }
+
+    #portada h2 {
+        font-size: 1.1em;
+    }
+
+    .boton-portada {
+        padding: 0.8em 1.5em;
+        font-size: 0.9em;
+    }
+
+    /* Ajustes para la sección about */
+    .about {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contenedor {
+        width: 50%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .contenedor h2 {
+        font-size: 1.8em;
+    }
+
+    .contenedor h3 {
+        font-size: 1.4em;
+    }
+
+    .contenedor p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .figura-descripcion {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .figura-descripcion img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sillaBackground {
+        width: 100%;
+        height: 100%;
+        right: 0;
+    }
+
+    /* Ajustes para la tabla de servicios */
+    table {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        display: table;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+    }
+
+    tr {
+        display: table-row;
+        text-align: center;
+    }
+
+    td {
+        font-size: 1.1em;
+        padding: 8px;
+        text-align: center;
+    }
+
+    td:first-child {
+        padding: 8px;
+        text-align: center;
+    }
+
+    /* Ajustes para el footer */
+    footer section {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .footer-links {
+        margin-bottom: 20px;
+    }
+
+    .h3-footer, .p-footer {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+/* Pantallas muy pequeñas (menos de 480px) */
+@media screen and (max-width: 480px) {
+    .titulo-portada h1 {
+        font-size: 1.5em;
+    }
+
+    #portada h2 {
+        font-size: 1em;
+    }
+
+    .nav a {
+        font-size: 0.9em;
+    }
+
+    .dropdown-content a {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    .contenedor h2 {
+        font-size: 1.5em;
+    }
+
+    .contenedor h3 {
+        font-size: 1.2em;
+    }
+
+    .contenedor p {
+        font-size: 0.8em;
+        line-height: 1.3;
+    }
+
+    .figura-descripcion {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .figura-descripcion img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .sillaBackground {
+        width: 90%;
+        height: 90%;
+        right: 5%;
+    }
+
+    /* Ajustes para la tabla de servicios */
+    table {
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+        display: table;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+    }
+
+    tr {
+        display: table-row;
+        text-align: center;
+    }
+
+    td {
+        font-size: 1em;
+        padding: 5px;
+        text-align: center;
+    }
+
+    td:first-child {
+        padding: 5px;
+        text-align: center;
+    }
+}
