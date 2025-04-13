@@ -19,18 +19,23 @@ html{
     
 }
 .nav-bar{
-    width: 100% ;
+    width: 100%;
     min-width: 320px;
     height: 80px;
-    padding: 10px;
-    justify-content: space-between;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-right-section{
     width: 250px;
-    height: auto ;
+    height: auto;
     font-size: 16px;
-    font-family: 'poetsen one'; 
+    font-family: 'poetsen one';
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-right-section a {
@@ -43,10 +48,12 @@ html{
 .nav-right-section a:hover {
     color:slategray;
 }
-.logo-barberia{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+.logo-barberia {
+    width: 120px;
+    height: auto;
+    border-radius: 35%;
+    margin-right: 25px;
+    object-fit: contain;
 }
 /* Seccion Presentacion */
 
