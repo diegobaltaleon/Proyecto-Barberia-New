@@ -12,24 +12,28 @@ header{
 }
 
 .nav{
-    background-color: rgba(90, 90,90,0.5);
+    background-color: rgba(90, 90, 90, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
     width: 100%;
-    gap: 30px;
+    max-width: 100vw;
+    gap: 20px;
     flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .menu-toggle {
@@ -98,11 +102,20 @@ figure {
 
 .logo-nav{
     height: auto;
+    max-width: 120px;
     border-radius: 35%;
     width: 100%;
     display: block;
+    object-fit: contain;
 }
 
+#logo img {
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+    border-radius: 35%;
+    object-fit: contain;
+}
 
 /* Seccion Main  */
 main{
@@ -283,31 +296,29 @@ article{
 }
     /* FIGURE  */
 
-.about > figure{
+.about > figure {
     width: 50%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
 }
-figure{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-    unicode-bidi: isolate;
-}
-.figura-descripcion img{
-    overflow-clip-margin: content-box;
-    overflow: clip;
+
+.figura-descripcion img {
     max-width: 800px;
     max-height: 600px;
+    object-fit: contain;
 }
-.sillaBackground{
+
+.sillaBackground {
     width: 30vw;
     height: 50vh;
     background: #afa27b;
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 150px;
+    transform: translateY(-50%);
     z-index: -1;
 }
 
@@ -315,9 +326,13 @@ figure{
 .servicesContainer{
     width: 100%;
     min-height: 300px;
-    background: #282828;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('logobarberianew.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin-bottom: 30px;
-    padding-bottom: 150px;
+    padding: 50px 0 150px 0;
     position: relative;
 }
 #top{
@@ -355,56 +370,118 @@ figure{
     letter-spacing: 2px;
     text-transform: uppercase;
     unicode-bidi: isolate;
+    color: #afa27b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 /* TABLA SERVICIOS  */
-table{
+table {
     margin: 0 auto;
-    padding: 25px ;
+    padding: 25px;
     border: 15px solid #afa27b;
-    background: #282828;
-    background: url(https://barbershop23i.netlify.app/img/table_bg.png);
-    background-position: center;
-    background-size: center;
-    
+    background: rgba(40, 40, 40, 0.95);
     border-collapse: separate;
     box-sizing: border-box;
-    text-indent: initial;
-    unicode-bidi: isolate;
     border-spacing: 2px;
     border-color: #afa27b;
-    width: 40%  ;
-    display: flex;
+    width: 100%;
+    max-width: 600px;
+    display: table;
+    box-shadow: 0 0 20px rgba(175, 162, 123, 0.3);
 }
-tbody{
+
+tbody {
     display: table-row-group;
     vertical-align: middle;
-    unicode-bidi: isolate;
     border-color: inherit;
-    
 }
-tr{
+
+tr {
     display: table-row;
-    vertical-align: inherit;
-    unicode-bidi: isolate;
+    vertical-align: middle;
     border-color: inherit;
 }
-tr:nth-child(odd){
+
+tr:nth-child(odd) {
     color: #fff;
 }
-td{
-    font-size: 30px;
+
+td {
+    font-size: 1.2em;
     border-bottom: 1px dashed #afa27b;
     display: table-cell;
-    vertical-align: inherit;
-    unicode-bidi: isolate;
-    width: 100%;
-    }
-td:first-child{
-    padding: 15px 200px 15px 0px;
+    vertical-align: middle;
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    word-wrap: break-word;
+    max-width: 50%;
 }
-tr:nth-child(even){
+
+td:first-child {
+    text-align: center;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
     color: #afa27b;
 }
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    table {
+        max-width: 90%;
+        padding: 20px;
+        border-width: 12px;
+    }
+
+    td {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+}
+
+/* Tablets pequeñas (600px - 768px) */
+@media screen and (max-width: 768px) {
+    table {
+        max-width: 95%;
+        padding: 15px;
+        border-width: 10px;
+    }
+
+    td {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+/* Móviles (480px - 600px) */
+@media screen and (max-width: 600px) {
+    table {
+        max-width: 98%;
+        padding: 10px;
+        border-width: 8px;
+    }
+
+    td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+/* Móviles pequeños (menos de 480px) */
+@media screen and (max-width: 480px) {
+    table {
+        max-width: 100%;
+        padding: 8px;
+        border-width: 6px;
+    }
+
+    td {
+        font-size: 0.85em;
+        padding: 6px;
+    }
+}
+
 /* FOTOS  */
 
 
@@ -535,7 +612,7 @@ a:-webkit-any-link{
     background-color: rgba(90, 90, 90, 0.95);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1001;
     border-radius: 5px;
     top: 100%;
     left: 50%;
@@ -588,317 +665,99 @@ a:-webkit-any-link{
 /* Tablets (768px - 1024px) */
 @media screen and (max-width: 1024px) {
     .nav {
-        gap: 20px;
-        padding: 10px;
-        justify-content: space-between;
+        background-color: rgba(90, 90, 90, 0.7);
+        display: block;
+        padding: 15px 20px;
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        top: 20px;
     }
 
     .nav-links {
-        gap: 20px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(90, 90, 90, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s ease-in-out;
+        backdrop-filter: blur(5px);
+    }
+
+    .nav.active .nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav a {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    .dropdown-content {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
         font-size: 1em;
-        padding: 8px 12px;
-    }
-
-    #logo {
-        width: 60px;
-    }
-
-    .titulo-portada h1 {
-        font-size: 2.2em;
-    }
-
-    #portada h2 {
-        font-size: 1.3em;
-    }
-
-    .about {
-        flex-direction: row;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .contenedor {
-        width: 50%;
-        margin: 0;
-        padding: 15px;
-    }
-
-    .figura-descripcion {
-        width: 50%;
-        margin-top: 0;
-    }
-
-    .sillaBackground {
-        width: 100%;
-        height: 100%;
-        right: 0;
-    }
-
-    /* Ajustes para la tabla de servicios */
-    table {
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-        display: table;
-    }
-
-    tbody {
-        display: table-row-group;
-        vertical-align: middle;
-    }
-
-    tr {
-        display: table-row;
-        text-align: center;
-    }
-
-    td {
-        font-size: 1.2em;
-        padding: 10px;
-        text-align: center;
-    }
-
-    td:first-child {
-        padding: 10px;
-        text-align: center;
     }
 }
 
 /* Móviles (menos de 768px) */
 @media screen and (max-width: 768px) {
+    .nav {
+        background-color: rgba(90, 90, 90, 0.8);
+        height: 60px;
+    }
+
     .menu-toggle {
-        display: block;
+        top: 15px;
     }
 
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        top: 60px;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        font-size: 16px;
         width: 100%;
-        background-color: rgba(90, 90, 90, 0.95);
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .nav.active .nav-links {
-        display: flex;
-    }
-
-    .nav.active .hamburger {
-        background-color: transparent;
-    }
-
-    .nav.active .hamburger::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    .nav.active .hamburger::after {
-        transform: rotate(-45deg);
-        bottom: 0;
+        text-align: center;
     }
 
     .nav a {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
-
-    #logo {
-        width: 50px;
-        margin: 10px 0;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: static;
-        width: 100%;
-        background-color: rgba(90, 90, 90, 0.8);
-    }
-
-    .dropdown.active .dropdown-content {
-        display: block;
-    }
-
-    .titulo-portada h1 {
-        font-size: 1.8em;
-    }
-
-    #portada h2 {
-        font-size: 1.1em;
-    }
-
-    .boton-portada {
-        padding: 0.8em 1.5em;
-        font-size: 0.9em;
-    }
-
-    /* Ajustes para la sección about */
-    .about {
-        flex-direction: row;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .contenedor {
-        width: 50%;
-        margin: 0;
-        padding: 15px;
-    }
-
-    .contenedor h2 {
-        font-size: 1.8em;
-    }
-
-    .contenedor h3 {
-        font-size: 1.4em;
-    }
-
-    .contenedor p {
-        font-size: 0.9em;
-        line-height: 1.4;
-    }
-
-    .figura-descripcion {
-        width: 50%;
-        margin-top: 0;
-    }
-
-    .figura-descripcion img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .sillaBackground {
-        width: 100%;
-        height: 100%;
-        right: 0;
-    }
-
-    /* Ajustes para la tabla de servicios */
-    table {
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-        display: table;
-    }
-
-    tbody {
-        display: table-row-group;
-        vertical-align: middle;
-    }
-
-    tr {
-        display: table-row;
-        text-align: center;
-    }
-
-    td {
-        font-size: 1.1em;
-        padding: 8px;
-        text-align: center;
-    }
-
-    td:first-child {
-        padding: 8px;
-        text-align: center;
-    }
-
-    /* Ajustes para el footer */
-    footer section {
-        flex-direction: column;
-        padding: 20px 10px;
-    }
-
-    .footer-links {
-        margin-bottom: 20px;
-    }
-
-    .h3-footer, .p-footer {
-        padding: 0;
-        text-align: center;
+        font-size: 0.85em;
+        padding: 6px 8px;
     }
 }
 
-/* Pantallas muy pequeñas (menos de 480px) */
+/* Pantallas muy pequeñas */
 @media screen and (max-width: 480px) {
-    .titulo-portada h1 {
-        font-size: 1.5em;
-    }
-
-    #portada h2 {
-        font-size: 1em;
-    }
-
     .nav a {
-        font-size: 0.9em;
+        font-size: 1em;
+        padding: 12px;
     }
 
     .dropdown-content a {
+        padding: 8px;
         font-size: 0.9em;
-        padding: 8px 12px;
-    }
-
-    .contenedor h2 {
-        font-size: 1.5em;
-    }
-
-    .contenedor h3 {
-        font-size: 1.2em;
-    }
-
-    .contenedor p {
-        font-size: 0.8em;
-        line-height: 1.3;
-    }
-
-    .figura-descripcion {
-        width: 50%;
-        margin-top: 0;
-    }
-
-    .figura-descripcion img {
-        max-width: 90%;
-        height: auto;
-    }
-
-    .sillaBackground {
-        width: 90%;
-        height: 90%;
-        right: 5%;
-    }
-
-    /* Ajustes para la tabla de servicios */
-    table {
-        width: 100%;
-        margin: 0;
-        padding: 5px;
-        display: table;
-    }
-
-    tbody {
-        display: table-row-group;
-        vertical-align: middle;
-    }
-
-    tr {
-        display: table-row;
-        text-align: center;
-    }
-
-    td {
-        font-size: 1em;
-        padding: 5px;
-        text-align: center;
-    }
-
-    td:first-child {
-        padding: 5px;
-        text-align: center;
     }
 }
